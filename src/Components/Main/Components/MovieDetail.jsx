@@ -114,7 +114,7 @@ function useEffectCompo() {
       );
       const data = await res.json();
       setMovie(data);
-      // console.log(data);
+    
       setIsLoading(false);
     }
     fetchMovieDetails();

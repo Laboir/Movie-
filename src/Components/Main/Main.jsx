@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { watchdata } from "../Data/Data";
+import React, { useState } from "react";
+
 import { useContext } from "react";
 import { Context_Api } from "../Context/Context";
 import FetchData from "./Components/FetchData";
@@ -33,7 +33,7 @@ export default function Main() {
         ) : (
           <>
             <WatchMovieFirst />
-            <WatchedList watchdata={watchdata} />
+            <WatchedList  />
           </>
         )}
       </Box>
