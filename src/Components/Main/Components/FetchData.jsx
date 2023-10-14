@@ -50,8 +50,8 @@ function FetchDataAPi() {
     return function () {
       cleanUp.abort();
     };
-    
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line
   }, [search]);
 }
 

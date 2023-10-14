@@ -33,7 +33,7 @@ export default function Main() {
         ) : (
           <>
             <WatchMovieFirst />
-            <WatchedList  />
+            <WatchedList />
           </>
         )}
       </Box>
