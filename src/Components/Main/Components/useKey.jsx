@@ -9,5 +9,6 @@ export default function useKey(key, action) {
     }
     document.addEventListener("keydown", callBack);
     return () => document.addEventListener("keydown", callBack);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [action]);
 }

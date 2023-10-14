@@ -1,27 +1,45 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext,  } from "react";
 import { Context_Api } from "../../Context/Context";
 
 export default function Movielist({ movie }) {
   return (
     <div>
-      <UlList movie={movie} />
+      <ParentItems movie={movie} />
     </div>
   );
 }
 
 // ! Parent
-function UlList({ movie }) {
+// function UlList({ movie }) {
+//   console.log(movie);
+//   return (
+//     <ul className="mt-5  flex flex-col gap-5">
+//       {movie?.map((item) => {
+//         return (
+//           <>
+//             <RenderListItems item={item} key={movie. title} />
+//             <hr className="bg-slate-500 h-[2px] border-none" />
+//           </>
+//         );
+//       })}
+//     </ul>
+//   );
+// }
+
+function ParentItems({ movie }) {
   return (
-    <ul className="mt-5  flex flex-col gap-5">
-      {movie?.map((item) => {
-        return (
-          <>
-            <RenderListItems item={item} key={item.imdbID} />
-            <hr className="bg-slate-500 h-[2px] border-none" />
-          </>
-        );
-      })}
-    </ul>
+    <div>
+      <ul className="mt-5  flex flex-col gap-5">
+        {movie?.map((item, i) => {
+          return (
+            <div key={i}>
+              <RenderListItems item={item} />
+              <hr className="bg-slate-500 h-[2px] border-none" />
+            </div>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 
