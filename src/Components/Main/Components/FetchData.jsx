@@ -20,7 +20,7 @@ function FetchDataAPi() {
         setError("");
         setIsLoader(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${key}&s=${search}`,
+          `https://www.omdbapi.com/?apikey=${key}&s=${search}`,
           { signal: cleanUp.signal }
         );
         const data = await res.json();
